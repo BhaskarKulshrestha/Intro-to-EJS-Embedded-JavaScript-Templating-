@@ -223,3 +223,9 @@ The module.exports in Node.js is used to export any literal, function or object 
 
     module.exports.variable = literal | function | object   
 *Explanation*: Here the assigned value (literal | function | object) is indirectly exposed as a module and can be consumed using the variable.
+
+-----------------------------------------------------------------------------------------
+
+## Sample of the Project
+
+![Home Page](https://github.com/BhaskarKulshrestha/Intro-to-EJS-Embedded-JavaScript-Templating-/blob/main/images/Screenshot%202023-04-01%20222736.png)
