@@ -1,0 +1,47 @@
+<%- include('header'); -%>
+
+    <div class="box" id="heading">
+
+        <h1>
+            <%= listTitle %>
+        </h1>
+    </div>
+
+    <div class="box">
+
+        <% for(var i=0;i<newlistitem.length;i++) { %>
+            <div class="item">
+                <input type="checkbox">
+                <p>
+                    <%= newlistitem[i] %>
+                </p>
+            </div>
+
+            <% } %>
+
+
+        <form class="item" action="/" method="post" onsubmit="return validateForm()">
+            <input type="text" name="newItem" id="newItem" placeholder="New Items" autocomplete="off">
+
+            <button type="submit" class="button" name="list" value=<%= listTitle %>> + </button>
+        </form>
+
+        <div id="warning" style="display:none;color:red;font-size:20px;margin-left: 20px;font-weight: 700;">Please enter a value</div>
+
+    </div>
+
+    <script>
+        function validateForm() {
+            var input = document.getElementById("newItem");
+            if (input.value == "") {
+                document.getElementById("warning").style.display = "block";
+                return false;
+            } else {
+                document.getElementById("warning").style.display = "none";
+                return true;
+            }
+        }
+    </script>
+
+
+<%- include('footer'); -%>
